@@ -6,6 +6,8 @@ Feature: Add to cart
   SO that I can purchase the product
 
   Background: This is a background
+#    Do not complicate, keep short, expressive and vivid, keep scenario short
+
     Given I'm Fahim
     And I'm logged in
 
