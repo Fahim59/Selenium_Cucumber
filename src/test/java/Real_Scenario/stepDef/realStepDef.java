@@ -1,4 +1,4 @@
-package Real_Scenario;
+package Real_Scenario.stepDef;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
