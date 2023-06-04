@@ -12,7 +12,10 @@ import org.junit.runner.RunWith;
                 plugin = {"pretty","html:target/JUnit_Cucumber.html", "summary"},
                 snippets = CucumberOptions.SnippetType.CAMELCASE,
                 dryRun = true,
-                monochrome = true
+                monochrome = true,
+                //tags = "@Sanity"
+                //tags = "@Sanity and not @Regression"
+                tags = "@Sanity and @Regression"   //Duitai thaka lagbe
         )
 public class JUnitRunnerTest {
 
