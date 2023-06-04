@@ -1,2 +1,3 @@
+Real_Scenario\realStepDef.class
+Real_Scenario\JUnitRunnerTest.class
 com\awesomecucumber\MyStepdefs.class
-com\Real_Scenario\realStepDef.class
