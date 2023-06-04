@@ -7,7 +7,8 @@ import org.testng.annotations.BeforeClass;
 
 @CucumberOptions
         (
-                plugin = {"pretty","html:target/TestNG_Cucumber.html"}
+                plugin = {"pretty","html:target/TestNG_Cucumber.html", "summary"},
+                snippets = CucumberOptions.SnippetType.CAMELCASE
         )
 public class TestNGRunnerTest extends AbstractTestNGCucumberTests {
 

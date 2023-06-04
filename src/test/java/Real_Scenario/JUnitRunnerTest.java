@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions
         (
-                plugin = {"pretty","html:target/JUnit_Cucumber.html"}
+                plugin = {"pretty","html:target/JUnit_Cucumber.html", "summary"},
+                snippets = CucumberOptions.SnippetType.CAMELCASE
         )
 public class JUnitRunnerTest {
 
