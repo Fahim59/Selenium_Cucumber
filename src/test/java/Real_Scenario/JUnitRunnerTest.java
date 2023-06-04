@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         (
                 plugin = {"pretty","html:target/JUnit_Cucumber.html", "summary"},
                 snippets = CucumberOptions.SnippetType.CAMELCASE,
-                dryRun = true
+                dryRun = true,
+                monochrome = true
         )
 public class JUnitRunnerTest {
 
