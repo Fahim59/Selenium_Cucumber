@@ -1,13 +1,16 @@
 package Real_Scenario;
 
 import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.CucumberOptions;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions()
+@CucumberOptions
+        (
+                plugin = {"pretty","html:target/JUnit_Cucumber.json"}
+        )
 public class JUnitRunnerTest {
 
     @BeforeClass
