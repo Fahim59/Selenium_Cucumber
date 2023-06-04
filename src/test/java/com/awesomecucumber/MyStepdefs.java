@@ -13,5 +13,7 @@ public class MyStepdefs {
     public void iDoDummyThings() {
     }
 
-
+    @Then("Dummy things happen")
+    public void dummyThingsHappen() {
+    }
 }
