@@ -8,6 +8,11 @@ public class hooks {
         System.out.println("\nI'm BEFORE ALL\n");
     }
 
+    @BeforeStep
+    public static void beforeStep(){
+        System.out.println("\nI'm BEFORE STEP\n");
+    }
+
     @Before(order = 0)
     public static void before(Scenario scenario){
         System.out.println("\nI'm BEFORE 0\n");
@@ -28,6 +33,11 @@ public class hooks {
     @Before("@scenario1")
     public static void before2(){
         System.out.println("\nI'm BEFORE 2\n");
+    }
+
+    @AfterStep
+    public static void afterStep(){
+        System.out.println("\nI'm AFTER STEP\n");
     }
 
     @After(order = 0)
