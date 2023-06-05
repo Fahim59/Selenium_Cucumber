@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
                 //dryRun = true,
                 //tags = "@Sanity",
                 //monochrome = true
-                tags = "@Seven"
+                tags = "@Eight"
                 //tags = "@Sanity and not @Regression"
                 //tags = "@Sanity and @Regression"   //Duitai thaka lagbe
         )

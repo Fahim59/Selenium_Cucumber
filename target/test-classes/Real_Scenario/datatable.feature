@@ -37,15 +37,23 @@ Feature: Data Table
       |123     |
 
   @Six
+  Scenario: Multiple columns with no header
+    Given Multiple columns with no header Credentials are
+
+      |User1  | User2 |
+      |123    | 456   |
+
+  @Seven
   Scenario: Single column with header
     Given Single column with header, Credentials are
 
       |username | user1|
       |password | 123  |
 
-  @Seven
-  Scenario: Multiple columns with no header
-    Given Multiple columns with no header Credentials are
+  @Eight
+  Scenario: Multiple columns with header
+    Given Multiple columns with header, Credentials are
 
-      |User1  | User2 |
-      |123    | 456   |
+      | username | john    | bill    |
+      | password | john123 | bill123 |
+

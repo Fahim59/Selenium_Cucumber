@@ -50,5 +50,10 @@ Feature: Data Table
       |username | user1|
       |password | 123  |
 
+  @Eight
+  Scenario: Multiple columns with header
+    Given Multiple columns with header, Credentials are
 
+      | username | john    | bill    |
+      | password | john123 | bill123 |
 
