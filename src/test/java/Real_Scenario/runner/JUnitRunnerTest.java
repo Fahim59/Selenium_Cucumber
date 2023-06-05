@@ -9,13 +9,13 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions
         (
-                features = "src/test/resources/Real_Scenario/real.feature",
+                features = "src/test/resources/Real_Scenario/datatable.feature",
                 glue = "Real_Scenario.stepDef",
                 plugin = {"pretty","html:target/JUnit_Cucumber.html", "summary"},
-                snippets = CucumberOptions.SnippetType.CAMELCASE,
-                dryRun = true,
-                monochrome = true,
-                tags = "@Sanity"
+                snippets = CucumberOptions.SnippetType.CAMELCASE
+                //dryRun = true,
+                //tags = "@Sanity",
+                //monochrome = true
                 //tags = "@Sanity and not @Regression"
                 //tags = "@Sanity and @Regression"   //Duitai thaka lagbe
         )

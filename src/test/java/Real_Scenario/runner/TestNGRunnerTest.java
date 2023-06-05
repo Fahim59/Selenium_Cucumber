@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
                 glue = "Real_Scenario.stepDef",
                 plugin = {"pretty","html:target/TestNG_Cucumber.html", "summary"},
                 snippets = CucumberOptions.SnippetType.CAMELCASE,
-                dryRun = true,
+                //dryRun = true,
                 monochrome = true,
                 tags = "@Sanity"
                 //tags = "@Sanity and not @Regression"
