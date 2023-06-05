@@ -35,3 +35,10 @@ Feature: Data Table
 
       |User1   |
       |123     |
+
+  @Six
+  Scenario: Single column with header
+    Given Single column with header, Credentials are
+
+      |username | user1|
+      |password | 123  |

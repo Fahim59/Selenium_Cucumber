@@ -48,4 +48,10 @@ public class dataStepDef {
         System.out.println("Username: " +cred.get(0));
         System.out.println("Password: " +cred.get(1));
     }
+
+    @Given("Single column with header, Credentials are")
+    public void singleColumnWithHeaderCredentialsAre(Map<String, String> cred) {
+        System.out.println("Username: " +cred.get("username"));
+        System.out.println("Password: " +cred.get("password"));
+    }
 }
