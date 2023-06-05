@@ -1,7 +1,7 @@
 @dummyFeatures
 Feature: Add to cart
   Rule: Add from Store
-    
+
   Scenario Outline: Add one quantity to the cart
 
     Given I'm on the Store Page

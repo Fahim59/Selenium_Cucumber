@@ -17,15 +17,4 @@ import org.junit.runner.RunWith;
                 //monochrome = true,
                 //tags = "@Eight"
         )
-public class JUnitRunnerTest {
-
-//    @BeforeClass
-//    public static void beforeClass(){
-//        System.out.println("\nBEFORE CLASS\n");
-//    }
-//
-//    @AfterClass
-//    public static void afterClass(){
-//        System.out.println("\nAFTER CLASS\n");
-//    }
-}
+public class JUnitRunnerTest { }
