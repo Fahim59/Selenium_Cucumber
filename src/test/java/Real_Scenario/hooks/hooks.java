@@ -21,8 +21,13 @@ public class hooks {
     }
 
     @Before(order = 1)
-    public static void before(){
+    public static void before1(){
         System.out.println("\nI'm BEFORE 1\n");
+    }
+
+    @Before("@scenario1")
+    public static void before2(){
+        System.out.println("\nI'm BEFORE 2\n");
     }
 
     @After(order = 0)
@@ -38,8 +43,13 @@ public class hooks {
     }
 
     @After(order = 1)
-    public static void after(){
+    public static void after1(){
         System.out.println("\nI'm AFTER 1\n");
+    }
+
+    @After("@scenario2")
+    public static void after2(){
+        System.out.println("\nI'm AFTER 2\n");
     }
 
     @AfterAll
