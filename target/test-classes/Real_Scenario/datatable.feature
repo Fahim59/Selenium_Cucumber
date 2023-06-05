@@ -14,4 +14,9 @@ Feature: Data Table
       |User1  |123  |
       |User2  |456  |
 
+  @Three
+  Scenario: Single row with header
+    Given Single row with header, Credentials are
 
+      |username|password|
+      |User1   |123     |

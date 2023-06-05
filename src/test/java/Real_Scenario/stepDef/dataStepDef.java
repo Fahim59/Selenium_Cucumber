@@ -1,9 +1,11 @@
 package Real_Scenario.stepDef;
 
+import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
 import io.cucumber.datatable.DataTable;
 
 import java.util.List;
+import java.util.Map;
 
 public class dataStepDef {
 
@@ -24,5 +26,11 @@ public class dataStepDef {
 
         System.out.println("Row 1's UserName: " +creds.get(1).get(0));
         System.out.println("Row 1's Password: " +creds.get(1).get(1));
+    }
+
+    @Given("Single row with header, Credentials are")
+    public void singleRowWithHeaderCredentialsAre(List<Map<String, String>> creds) {
+        System.out.println("Username: " +creds.get(0).get("username"));
+        System.out.println("Password: " +creds.get(0).get("password"));
     }
 }
