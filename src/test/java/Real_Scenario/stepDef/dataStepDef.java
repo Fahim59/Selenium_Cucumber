@@ -54,4 +54,13 @@ public class dataStepDef {
         System.out.println("Username: " +cred.get("username"));
         System.out.println("Password: " +cred.get("password"));
     }
+
+    @Given("Multiple columns with no header Credentials are")
+    public void multipleColumnsWithNoHeaderCredentialsAre(List<List<String>> creds) {
+        System.out.println("Row 0's UserName: " +creds.get(0).get(0));
+        System.out.println("Row 0's Password: " +creds.get(1).get(0));
+
+        System.out.println("Row 1's UserName: " +creds.get(0).get(1));
+        System.out.println("Row 1's Password: " +creds.get(1).get(1));
+    }
 }

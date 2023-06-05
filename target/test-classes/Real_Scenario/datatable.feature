@@ -42,3 +42,10 @@ Feature: Data Table
 
       |username | user1|
       |password | 123  |
+
+  @Seven
+  Scenario: Multiple columns with no header
+    Given Multiple columns with no header Credentials are
+
+      |User1  | User2 |
+      |123    | 456   |
