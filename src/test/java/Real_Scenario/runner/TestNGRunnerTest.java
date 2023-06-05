@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 
 @CucumberOptions
         (
-                features = "src/test/resources/Real_Scenario/real.feature",
+                features = "src/test/resources/Real_Scenario/add_to_cart.feature",
                 glue = "Real_Scenario.stepDef",
                 plugin = {"pretty","html:target/TestNG_Cucumber.html", "summary"},
                 snippets = CucumberOptions.SnippetType.CAMELCASE,
