@@ -35,7 +35,10 @@ public class hooks {
         System.out.println("\nI'm BEFORE 2\n");
     }
 
-    
+    @AfterStep
+    public static void afterStep(){
+        System.out.println("\nI'm AFTER STEP\n");
+    }
 
     @After(order = 0)
     public static void after(Scenario scenario){
