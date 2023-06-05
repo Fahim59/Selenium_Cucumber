@@ -1,6 +1,4 @@
-@dummyFeatures
 Feature: Place an Order
-  Rule: Place an Order
 
   Scenario Outline: Using default payment option
 

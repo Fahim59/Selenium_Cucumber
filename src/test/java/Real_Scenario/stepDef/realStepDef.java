@@ -31,7 +31,7 @@ public class realStepDef {
         By addTocartBtn = By.xpath("//a[@aria-label='Add “"+product+"” to your cart']");
         driver.findElement(addTocartBtn).click();
 
-        Thread.sleep(1500);
+        Thread.sleep(2000);
 
         By viewCartLink = By.xpath("//a[@title='View cart']");
         driver.findElement(viewCartLink).click();
@@ -81,7 +81,6 @@ public class realStepDef {
 
     @When("I provide billing details")
     public void iProvideBillingDetails(List<Map<String, String>> details) throws InterruptedException {
-        //System.out.println("First Name: " +details.get(0).get("first_name"));
 
         By firstName = By.xpath("//input[@id='billing_first_name']");
         driver.findElement(firstName).sendKeys(details.get(0).get("first_name"));
