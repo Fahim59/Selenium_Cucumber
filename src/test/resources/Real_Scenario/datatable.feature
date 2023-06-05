@@ -28,3 +28,10 @@ Feature: Data Table
       |username|password|
       |User1   |123     |
       |User2   |456     |
+
+  @Five
+  Scenario: Single column with no header
+    Given Single column with no header, Credentials are
+
+      |User1   |
+      |123     |

@@ -42,4 +42,10 @@ public class dataStepDef {
         System.out.println("Row 1's UserName: " +creds.get(1).get("username"));
         System.out.println("Row 1's Password: " +creds.get(1).get("password"));
     }
+
+    @Given("Single column with no header, Credentials are")
+    public void singleColumnWithNoHeaderCredentialsAre(List<String> cred) {
+        System.out.println("Username: " +cred.get(0));
+        System.out.println("Password: " +cred.get(1));
+    }
 }
