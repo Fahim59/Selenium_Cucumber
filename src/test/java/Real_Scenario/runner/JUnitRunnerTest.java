@@ -14,11 +14,8 @@ import org.junit.runner.RunWith;
                 plugin = {"pretty","html:target/JUnit_Cucumber.html", "summary"},
                 snippets = CucumberOptions.SnippetType.CAMELCASE,
                 //dryRun = true,
-                //tags = "@Sanity",
-                //monochrome = true
+                //monochrome = true,
                 tags = "@Eight"
-                //tags = "@Sanity and not @Regression"
-                //tags = "@Sanity and @Regression"   //Duitai thaka lagbe
         )
 public class JUnitRunnerTest {
 
