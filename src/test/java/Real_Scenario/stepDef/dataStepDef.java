@@ -33,4 +33,13 @@ public class dataStepDef {
         System.out.println("Username: " +creds.get(0).get("username"));
         System.out.println("Password: " +creds.get(0).get("password"));
     }
+
+    @Given("Multiple rows with header, Credentials are")
+    public void multipleRowsWithHeaderCredentialsAre(List<Map<String, String>> creds) {
+        System.out.println("Row 0's UserName: " +creds.get(0).get("username"));
+        System.out.println("Row 0's Password: " +creds.get(0).get("password"));
+
+        System.out.println("Row 1's UserName: " +creds.get(1).get("username"));
+        System.out.println("Row 1's Password: " +creds.get(1).get("password"));
+    }
 }

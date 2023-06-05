@@ -20,3 +20,11 @@ Feature: Data Table
 
       |username|password|
       |User1   |123     |
+
+  @Four
+  Scenario: Multiple rows with header
+    Given Multiple rows with header, Credentials are
+
+      |username|password|
+      |User1   |123     |
+      |User2   |456     |
