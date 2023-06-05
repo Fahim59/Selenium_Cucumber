@@ -12,10 +12,11 @@ import org.junit.runner.RunWith;
                 features = "src/test/resources/Real_Scenario/datatable.feature",
                 glue = "Real_Scenario.stepDef",
                 plugin = {"pretty","html:target/JUnit_Cucumber.html", "summary"},
-                snippets = CucumberOptions.SnippetType.CAMELCASE
+                snippets = CucumberOptions.SnippetType.CAMELCASE,
                 //dryRun = true,
                 //tags = "@Sanity",
                 //monochrome = true
+                tags = "@Two"
                 //tags = "@Sanity and not @Regression"
                 //tags = "@Sanity and @Regression"   //Duitai thaka lagbe
         )
