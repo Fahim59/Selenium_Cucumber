@@ -1,5 +1,6 @@
 package Real_Scenario.stepDef;
 
+import Real_Scenario.factory.DriverFactory;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
@@ -12,15 +13,11 @@ import java.util.List;
 import java.util.Map;
 
 public class realStepDef {
-    public static WebDriver driver;
+    public WebDriver driver;
 
     @Given("I'm on the Store Page")
     public void i_m_on_the_store_page() {
-        System.out.println("I am on Store Page");
-
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        driver = DriverFactory.getDriver();
         driver.get("https://askomdch.com/store");
     }
 
@@ -54,9 +51,7 @@ public class realStepDef {
 
     @Given("I'm a customer")
     public void iMACustomer() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        driver = DriverFactory.getDriver();
         driver.get("https://askomdch.com/store");
     }
 
