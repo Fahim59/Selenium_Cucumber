@@ -1,6 +1,7 @@
 package Real_Scenario.stepDef;
 
 import Real_Scenario.factory.DriverFactory;
+import Real_Scenario.pages.StorePage;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
@@ -18,20 +19,12 @@ public class realStepDef {
     @Given("I'm on the Store Page")
     public void i_m_on_the_store_page() {
         driver = DriverFactory.getDriver();
-        driver.get("https://askomdch.com/store");
+        new StorePage(driver).OpenWebsite("https://askomdch.com/store");
     }
 
     @When("I add a {string} to the cart")
-    public void i_add_a_to_the_cart(String product) throws InterruptedException {
-        System.out.println("I add Product in the cart");
-
-        By addTocartBtn = By.xpath("//a[@aria-label='Add “"+product+"” to your cart']");
-        driver.findElement(addTocartBtn).click();
-
-        Thread.sleep(2000);
-
-        By viewCartLink = By.xpath("//a[@title='View cart']");
-        driver.findElement(viewCartLink).click();
+    public void i_add_a_to_the_cart(String product) {
+        new StorePage(driver).addToCart(product);
     }
 
     @Then("I see {int} {string} in the cart")
@@ -52,18 +45,12 @@ public class realStepDef {
     @Given("I'm a customer")
     public void iMACustomer() {
         driver = DriverFactory.getDriver();
-        driver.get("https://askomdch.com/store");
+        new StorePage(driver).OpenWebsite("https://askomdch.com/store");
     }
 
     @And("I have {int} {string} in the cart")
-    public void iHaveQuantityInTheCart(int quantity, String product) throws InterruptedException {
-        By addTocartBtn = By.xpath("//a[@aria-label='Add “"+product+"” to your cart']");
-        driver.findElement(addTocartBtn).click();
-
-        Thread.sleep(1500);
-
-        By viewCartLink = By.xpath("//a[@title='View cart']");
-        driver.findElement(viewCartLink).click();
+    public void iHaveQuantityInTheCart(int quantity, String product) {
+        new StorePage(driver).addToCart(product);
     }
 
     @And("I'm on the checkout page")
