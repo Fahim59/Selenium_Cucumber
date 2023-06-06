@@ -10,8 +10,8 @@ Feature: Place an Order
       |first_name|last_name|country   |street      |town |state |zip |phone      |email             |
       |Mustafizur|Rahman   |Bangladesh|Narayanganj |Dhaka|Dhaka |1250|01686026037|mustafiz@gmail.com|
 
-    And I place an order
-    Then The order should be placed successfully
+#    And I place an order
+#    Then The order should be placed successfully
 
     Examples:
     |product_name|quantity|

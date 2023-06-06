@@ -2,6 +2,7 @@ package Real_Scenario.stepDef;
 
 import Real_Scenario.factory.DriverFactory;
 import Real_Scenario.pages.CartPage;
+import Real_Scenario.pages.CheckoutPage;
 import Real_Scenario.pages.StorePage;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -48,60 +49,31 @@ public class realStepDef {
 
     @And("I'm on the checkout page")
     public void iMOnTheCheckoutPage() throws InterruptedException {
-        By checkoutButton = By.xpath("//a[@class='checkout-button button alt wc-forward']");
-        driver.findElement(checkoutButton).click();
-
-        Thread.sleep(1500);
+        new CartPage(driver).checkout();
     }
 
     @When("I provide billing details")
-    public void iProvideBillingDetails(List<Map<String, String>> details) throws InterruptedException {
+    public void iProvideBillingDetails(List<Map<String, String>> details) {
 
-        By firstName = By.xpath("//input[@id='billing_first_name']");
-        driver.findElement(firstName).sendKeys(details.get(0).get("first_name"));
-
-        By lastName = By.xpath("//input[@id='billing_last_name']");
-        driver.findElement(lastName).sendKeys(details.get(0).get("last_name"));
-
-        By country = By.xpath("//span[@id='select2-billing_country-container']");
-        driver.findElement(country).click();
-        driver.findElement(By.xpath("//input[@role='combobox']")).sendKeys(details.get(0).get("country"), Keys.ENTER);
-
-        By street = By.xpath("//input[@id='billing_address_1']");
-        driver.findElement(street).sendKeys(details.get(0).get("street"));
-
-        By town = By.xpath("//input[@id='billing_city']");
-        driver.findElement(town).sendKeys(details.get(0).get("town"));
-
-        By district = By.xpath("//span[@id='select2-billing_state-container']");
-        driver.findElement(district).click();
-        driver.findElement(By.xpath("//input[@role='combobox']")).sendKeys(details.get(0).get("state"), Keys.ENTER);
-
-        By postCode = By.xpath("//input[@id='billing_postcode']");
-        driver.findElement(postCode).sendKeys(details.get(0).get("zip"));
-
-        By phone = By.xpath("//input[@id='billing_phone']");
-        driver.findElement(phone).sendKeys(details.get(0).get("phone"));
-
-        By email = By.xpath("//input[@id='billing_email']");
-        driver.findElement(email).sendKeys(details.get(0).get("email"));
-
-        Thread.sleep(1500);
+        new CheckoutPage(driver).setBillingDetails(details.get(0).get("first_name"),
+                details.get(0).get("last_name"),
+                details.get(0).get("country"),
+                details.get(0).get("street"),
+                details.get(0).get("town"),
+                details.get(0).get("state"),
+                details.get(0).get("zip"),
+                details.get(0).get("phone"),
+                details.get(0).get("email")
+        );
     }
 
     @And("I place an order")
     public void iPlaceAnOrder() throws InterruptedException {
-        By placeOrder = By.xpath("//button[@id='place_order']");
-        driver.findElement(placeOrder).click();
-
-        Thread.sleep(1500);
+        new CheckoutPage(driver).placeorder();
     }
 
     @Then("The order should be placed successfully")
     public void theOrderShouldBePlacedSuccessfully() {
-        By text = By.xpath("//p[@class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received']");
-        String message = driver.findElement(text).getText();
-
-        Assert.assertEquals("Thank you. Your order has been received.", message);
+        Assert.assertEquals("Thank you. Your order has been received.", new CheckoutPage(driver).text());
     }
 }
