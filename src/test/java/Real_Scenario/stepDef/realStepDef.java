@@ -1,6 +1,7 @@
 package Real_Scenario.stepDef;
 
 import Real_Scenario.factory.DriverFactory;
+import Real_Scenario.pages.CartPage;
 import Real_Scenario.pages.StorePage;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -29,17 +30,9 @@ public class realStepDef {
 
     @Then("I see {int} {string} in the cart")
     public void i_see_in_the_cart(int quantity, String product) {
-        System.out.println("I see Product Quantity");
+        Assert.assertEquals(product, new CartPage(driver).getProductName());
 
-        By proName = By.xpath("//a[normalize-space()='Blue Shoes']");
-        String productName = driver.findElement(proName).getText();
-
-        Assert.assertEquals(product, productName);
-
-        By proQuantity = By.xpath("//input[@title='Qty']");
-        String productQuantity = driver.findElement(proQuantity).getAttribute("value");
-
-        Assert.assertEquals(quantity, Integer.parseInt(productQuantity));
+        Assert.assertEquals(quantity, new CartPage(driver).getProductQuantity());
     }
 
     @Given("I'm a customer")
