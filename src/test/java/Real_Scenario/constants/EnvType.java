@@ -1,6 +1,6 @@
 package Real_Scenario.constants;
 
 public enum EnvType {
-    PROD,
+    DEV,
     STAGE
 }

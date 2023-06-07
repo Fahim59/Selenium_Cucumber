@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="13377" started-at="2023-06-07T10:32:21 BDT" finished-at="2023-06-07T10:32:35 BDT">
+  <suite name="Command line suite" duration-ms="22800" started-at="2023-06-07T11:18:57 BDT" finished-at="2023-06-07T11:19:20 BDT">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Command line test" duration-ms="13377" started-at="2023-06-07T10:32:21 BDT" finished-at="2023-06-07T10:32:35 BDT">
+    <test name="Command line test" duration-ms="22800" started-at="2023-06-07T11:18:57 BDT" finished-at="2023-06-07T11:19:20 BDT">
       <class name="Real_Scenario.runner.TestNGRunnerTest">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="setUpClass" is-config="true" duration-ms="379" started-at="2023-06-07T10:32:21 BDT" finished-at="2023-06-07T10:32:22 BDT">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="setUpClass" is-config="true" duration-ms="385" started-at="2023-06-07T11:18:57 BDT" finished-at="2023-06-07T11:18:58 BDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@12bbfc54]]>
+                <![CDATA[org.testng.TestRunner@4ee25d80]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="runScenario" duration-ms="4941" started-at="2023-06-07T10:32:22 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-07T10:32:27 BDT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="runScenario" duration-ms="13603" started-at="2023-06-07T11:18:58 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-07T11:19:11 BDT">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="runScenario" duration-ms="7881" started-at="2023-06-07T10:32:27 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-07T10:32:34 BDT">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="runScenario" duration-ms="8662" started-at="2023-06-07T11:19:11 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-07T11:19:20 BDT">
           <params>
             <param index="0">
               <value>
@@ -50,10 +50,55 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[Element <button id="place_order" class="button alt" name="woocommerce_checkout_place_order" type="submit"> is not clickable at point (1034,403) because another element <div class="blockUI blockOverlay"> obscures it
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2deb64fc-22c3-4fa1-bf2a-598c8ef71e33, clickElement {id=70cae038-d110-48a7-81f8-e5b5c7190571}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 106.0.5, moz:accessibilityChecks: false, moz:buildID: 20221104133228, moz:debuggerAddress: 127.0.0.1:44636, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10968, moz:profile: C:\Users\MUSTAF~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:44636/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (2deb64fc-22c3-4fa1-bf2a-598c8ef71e33)] -> xpath: //button[@id='place_order']]
+Session ID: 2deb64fc-22c3-4fa1-bf2a-598c8ef71e33]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: Element <button id="place_order" class="button alt" name="woocommerce_checkout_place_order" type="submit"> is not clickable at point (1034,403) because another element <div class="blockUI blockOverlay"> obscures it
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2deb64fc-22c3-4fa1-bf2a-598c8ef71e33, clickElement {id=70cae038-d110-48a7-81f8-e5b5c7190571}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 106.0.5, moz:accessibilityChecks: false, moz:buildID: 20221104133228, moz:debuggerAddress: 127.0.0.1:44636, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10968, moz:profile: C:\Users\MUSTAF~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:44636/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (2deb64fc-22c3-4fa1-bf2a-598c8ef71e33)] -> xpath: //button[@id='place_order']]
+Session ID: 2deb64fc-22c3-4fa1-bf2a-598c8ef71e33
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at com.sun.proxy.$Proxy26.click(Unknown Source)
+at Real_Scenario.pages.CheckoutPage.placeorder(CheckoutPage.java:109)
+at Real_Scenario.stepDef.realStepDef.iPlaceAnOrder(realStepDef.java:70)
+at ✽.I place an order(file:///E:/Intellij%20Files/Selenium_Cucumber/src/test/resources/Real_Scenario/guest_place_an_order.feature:13)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="tearDownClass" is-config="true" duration-ms="147" started-at="2023-06-07T10:32:34 BDT" finished-at="2023-06-07T10:32:35 BDT">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="tearDownClass" is-config="true" duration-ms="126" started-at="2023-06-07T11:19:20 BDT" finished-at="2023-06-07T11:19:20 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

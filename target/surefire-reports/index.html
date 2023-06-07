@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Command_line_suite">
-              <span class="suite-name border-passed">Command line suite</span>
+              <span class="suite-name border-failed">Command line suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods failed suite-Command_line_suite"> (hide)</a> <!-- hide-methods failed suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods failed suite-Command_line_suite"> (show)</a> <!-- show-methods failed suite-Command_line_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Command_line_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="Real_Scenario.runner.TestNGRunnerTest" hash-for-method="runScenario(&quot;Using default payment option&quot;, &quot;Optional[Place an Order]&quot;)">runScenario("Using default payment option", "Optional[Place an Order]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Command_line_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,11 +119,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="Real_Scenario.runner.TestNGRunnerTest" hash-for-method="runScenario(&quot;Add one quantity to the cart&quot;, &quot;Optional[Add to cart]&quot;)">runScenario("Add one quantity to the cart", "Optional[Add to cart]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="Real_Scenario.runner.TestNGRunnerTest" hash-for-method="runScenario(&quot;Using default payment option&quot;, &quot;Optional[Place an Order]&quot;)">runScenario("Using default payment option", "Optional[Place an Order]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Command_line_suite -->
@@ -124,6 +133,48 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
+          <div class="suite-Command_line_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Real_Scenario.runner.TestNGRunnerTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Using default payment option&quot;, &quot;Optional[Place an Order]&quot;)">
+                  </a> <!-- runScenario("Using default payment option", "Optional[Place an Order]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Using default payment option", "Optional[Place an Order]")</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;button id=&quot;place_order&quot; class=&quot;button alt&quot; name=&quot;woocommerce_checkout_place_order&quot; type=&quot;submit&quot;&gt; is not clickable at point (1034,403) because another element &lt;div class=&quot;blockUI blockOverlay&quot;&gt; obscures it
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2deb64fc-22c3-4fa1-bf2a-598c8ef71e33, clickElement {id=70cae038-d110-48a7-81f8-e5b5c7190571}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 106.0.5, moz:accessibilityChecks: false, moz:buildID: 20221104133228, moz:debuggerAddress: 127.0.0.1:44636, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10968, moz:profile: C:\Users\MUSTAF~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:44636/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (2deb64fc-22c3-4fa1-bf2a-598c8ef71e33)] -&gt; xpath: //button[@id=&apos;place_order&apos;]]
+Session ID: 2deb64fc-22c3-4fa1-bf2a-598c8ef71e33
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy26.click(Unknown Source)
+	at Real_Scenario.pages.CheckoutPage.placeorder(CheckoutPage.java:109)
+	at Real_Scenario.stepDef.realStepDef.iPlaceAnOrder(realStepDef.java:70)
+	at ✽.I place an order(file:///E:/Intellij%20Files/Selenium_Cucumber/src/test/resources/Real_Scenario/guest_place_an_order.feature:13)
+... Removed 8 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-failed -->
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -136,16 +187,6 @@
                   </a> <!-- runScenario("Add one quantity to the cart", "Optional[Add to cart]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Add one quantity to the cart", "Optional[Add to cart]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Using default payment option&quot;, &quot;Optional[Place an Order]&quot;)">
-                  </a> <!-- runScenario("Using default payment option", "Optional[Place an Order]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Using default payment option", "Optional[Place an Order]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -216,16 +257,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Real_Scenario.runner.TestNGRunnerTest')
-data.setCell(0, 3, 7881);
+data.setCell(0, 3, 13603);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'Real_Scenario.runner.TestNGRunnerTest')
-data.setCell(1, 3, 4941);
+data.setCell(1, 3, 8662);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -253,20 +294,22 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Real_Scenario.runner.TestNGRunnerTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@12bbfc54)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@4ee25d80)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Add one quantity to the cart", "Optional[Add to cart]")</span>
-                <span class="method-start">387 ms</span>
+                <span class="method-start">392 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Using default payment option", "Optional[Place an Order]")</span>
-                <span class="method-start">5334 ms</span>
+                <span class="method-start">13995 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">13217 ms</span>
+                <span class="method-start">22661 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
