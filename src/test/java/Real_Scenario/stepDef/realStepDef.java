@@ -7,17 +7,42 @@ import Real_Scenario.pages.CheckoutPage;
 import Real_Scenario.pages.PageFactoryManager;
 import Real_Scenario.pages.StorePage;
 import io.cucumber.java.en.*;
+import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.*;
+import org.apache.logging.log4j.core.config.Configurator;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import java.io.File;
 import java.util.List;
 import java.util.Map;
 
 public class realStepDef {
     public WebDriver driver;
-    private CartPage cartPage;
-    private StorePage storePage;
-    private CheckoutPage checkoutPage;
+    private final CartPage cartPage;
+    private final StorePage storePage;
+    private final CheckoutPage checkoutPage;
+
+//    private static final Logger logger = LogManager.getLogger(realStepDef.class);
+//
+//    public static void main(String[] args) {
+//        Configurator.initialize(null, "log4j2.xml");
+//    }
+
+//    public static void saveLogFile() {
+//        try {
+//            File logFile = new File("Log Result/test.log");
+//            File outputFile = new File("Log Result/test_output.txt");
+//
+//            String logContents = FileUtils.readFileToString(logFile, "UTF-8");
+//            FileUtils.writeStringToFile(outputFile, logContents, "UTF-8");
+//
+//            logger.info("Log file saved to: " + outputFile.getAbsolutePath());
+//        }
+//        catch (Exception e) {
+//            logger.error("Error saving log file", e);
+//        }
+//    }
 
     public realStepDef(TestContext context) {
         driver = context.driver;

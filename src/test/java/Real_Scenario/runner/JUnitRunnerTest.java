@@ -9,7 +9,8 @@
 //        (
 //                features = "src/test/resources/Real_Scenario",
 //                glue = {"Real_Scenario.stepDef","Real_Scenario.hooks"},
-//                plugin = {"pretty","html:target/JUnit_Cucumber.html", "summary"},
+//                plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+//                        "rerun:target/Failed_Scenario/failedscenarios.txt"},
 //                snippets = CucumberOptions.SnippetType.CAMELCASE
 //                //dryRun = true,
 //                //monochrome = true,

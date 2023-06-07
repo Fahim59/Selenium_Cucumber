@@ -46,6 +46,7 @@ public class MyHooks {
     @After
     public void after(Scenario scenario){
         System.out.println("After Thread ID: " +Thread.currentThread().getId() +","+ "Scenario Name: " +scenario.getName());
+        //saveLogFile();
         driver.quit();
     }
 }
