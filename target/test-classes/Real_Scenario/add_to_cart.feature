@@ -11,4 +11,3 @@ Feature: Add to cart
     |Blue Shoes      |1       |
 #    |Dark Brown Jeans|1       |
 
-

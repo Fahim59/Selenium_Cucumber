@@ -14,7 +14,8 @@ public class MyHooks {
     private static WebDriver driver;
 
     @Before
-    public static void before(){
+    public static void before(Scenario scenario){
+        System.out.println("Before Thread ID: " +Thread.currentThread().getId() +","+ "Scenario Name: " +scenario.getName());
         driver = DriverFactory.initializeDriver(System.getProperty("browser","chrome"));
     }
 
@@ -36,6 +37,7 @@ public class MyHooks {
 
     @After
     public static void after(Scenario scenario){
+        System.out.println("After Thread ID: " +Thread.currentThread().getId() +","+ "Scenario Name: " +scenario.getName());
         driver.quit();
     }
 }

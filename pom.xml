@@ -19,6 +19,16 @@
                     <executable>C:\Program Files\Java\jdk1.8.0_111\bin\javac</executable>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+<!--                <configuration>-->
+<!--                    <parallel>methods</parallel>-->
+<!--                    <threadCount>3</threadCount>  &lt;!&ndash; feature count &ndash;&gt;-->
+<!--                </configuration>-->
+            </plugin>
         </plugins>
     </build>
 

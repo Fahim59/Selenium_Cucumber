@@ -5,10 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.sql.Driver;
+
 public class DriverFactory {
-    private static WebDriver driver;
+    //private static WebDriver driver;
+    public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     public static WebDriver initializeDriver(String browser){
+        WebDriver driver;
+
         switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
@@ -23,10 +28,12 @@ public class DriverFactory {
 
             default: throw new IllegalStateException("INVALID BROWSER" +browser);
         }
+        DriverFactory.driver.set(driver);
         return driver;
     }
 
     public static WebDriver getDriver(){
-        return driver;
+        //return driver;
+        return driver.get();
     }
 }
