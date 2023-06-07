@@ -1,1 +1,13 @@
 2023-06-07 17:03:05.407 [TestNG-PoolService-0] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:03:09.569 [TestNG-PoolService-1] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:14:27.265 [TestNG-PoolService-0] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:14:30.757 [TestNG-PoolService-1] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:16:02.936 [TestNG-PoolService-0] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:16:06.057 [TestNG-PoolService-1] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:18:23.565 [TestNG-PoolService-0] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:18:27.190 [TestNG-PoolService-1] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:18:41.908 [TestNG-PoolService-0] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:18:45.207 [TestNG-PoolService-1] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:21:09.237 [TestNG-PoolService-0] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:21:12.507 [TestNG-PoolService-1] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
+2023-06-07 17:22:38.638 [TestNG-PoolService-0] INFO  Real_Scenario.stepDef.realStepDef - Log file saved to: E:\Intellij Files\Selenium_Cucumber\Log Result\test_output.txt
