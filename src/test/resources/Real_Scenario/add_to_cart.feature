@@ -7,7 +7,8 @@ Feature: Add to cart
     Then I see <quantity> "<product_name>" in the cart
 
     Examples:
-    |product_name|quantity|
-    |Blue Shoes  |1       |
+    |product_name    |quantity|
+    |Blue Shoes      |1       |
+    |Dark Brown Jeans|1       |
 
 
