@@ -15,7 +15,7 @@ public class MyHooks {
 
     @Before
     public static void before(){
-        driver = DriverFactory.initializeDriver();
+        driver = DriverFactory.initializeDriver(System.getProperty("browser","chrome"));
     }
 
 //    @AfterStep
