@@ -5,7 +5,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions
         (
-                features = "src/test/resources/Real_Scenario/add_to_cart.feature",
+                features = "src/test/resources/Real_Scenario",
                 glue = {"Real_Scenario.stepDef","Real_Scenario.hooks"},
                 plugin = {"pretty","html:target/TestNG_Cucumber.html", "summary"},
                 snippets = CucumberOptions.SnippetType.CAMELCASE

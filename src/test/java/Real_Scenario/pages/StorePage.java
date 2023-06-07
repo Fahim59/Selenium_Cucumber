@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.nio.charset.StandardCharsets;
-
 public class StorePage extends BasePage{
     public StorePage(WebDriver driver) {
         super(driver);
@@ -19,13 +17,5 @@ public class StorePage extends BasePage{
         By addTocartBtn = By.xpath("//a[@aria-label='Add “"+productName+"” to your cart']");
         wait.until(ExpectedConditions.elementToBeClickable(addTocartBtn)).click();
         wait.until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
-
-//        String xpath = "//a[@aria-label='Add “"+productName+"” to your cart']";
-//        byte[] bytes = xpath.getBytes(StandardCharsets.UTF_8);
-//        String utf = new String(bytes, StandardCharsets.UTF_8);
-//        By addTocartBtn = By.xpath(utf);
-//
-//        wait.until(ExpectedConditions.elementToBeClickable(addTocartBtn)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
     }
 }

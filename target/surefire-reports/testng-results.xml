@@ -1,38 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="551" started-at="2023-06-07T09:37:54 BDT" finished-at="2023-06-07T09:37:55 BDT">
+  <suite name="Command line suite" duration-ms="13377" started-at="2023-06-07T10:32:21 BDT" finished-at="2023-06-07T10:32:35 BDT">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@cb51256]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Command line test" duration-ms="551" started-at="2023-06-07T09:37:54 BDT" finished-at="2023-06-07T09:37:55 BDT">
+    <test name="Command line test" duration-ms="13377" started-at="2023-06-07T10:32:21 BDT" finished-at="2023-06-07T10:32:35 BDT">
       <class name="Real_Scenario.runner.TestNGRunnerTest">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@cb51256]" name="setUpClass" is-config="true" duration-ms="380" started-at="2023-06-07T09:37:54 BDT" finished-at="2023-06-07T09:37:55 BDT">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="setUpClass" is-config="true" duration-ms="379" started-at="2023-06-07T10:32:21 BDT" finished-at="2023-06-07T10:32:22 BDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@730d2164]]>
+                <![CDATA[org.testng.TestRunner@12bbfc54]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@cb51256]" name="beforeClass" is-config="true" duration-ms="0" started-at="2023-06-07T09:37:55 BDT" finished-at="2023-06-07T09:37:55 BDT">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="runScenario" duration-ms="4941" started-at="2023-06-07T10:32:22 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-07T10:32:27 BDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add one quantity to the cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Add to cart]"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@cb51256]" name="tearDownClass" is-config="true" duration-ms="145" started-at="2023-06-07T09:37:55 BDT" finished-at="2023-06-07T09:37:55 BDT">
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="runScenario" duration-ms="7881" started-at="2023-06-07T10:32:27 BDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-07T10:32:34 BDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Using default payment option"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Place an Order]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@587d1d39]" name="tearDownClass" is-config="true" duration-ms="147" started-at="2023-06-07T10:32:34 BDT" finished-at="2023-06-07T10:32:35 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:Real_Scenario.runner.TestNGRunnerTest@cb51256]" name="afterClass" is-config="true" duration-ms="0" started-at="2023-06-07T09:37:55 BDT" finished-at="2023-06-07T09:37:55 BDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
       </class> <!-- Real_Scenario.runner.TestNGRunnerTest -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->

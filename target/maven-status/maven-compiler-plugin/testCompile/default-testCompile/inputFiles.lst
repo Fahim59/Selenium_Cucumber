@@ -5,11 +5,9 @@ E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\utils\ConfigLoad
 E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\constants\EnvType.java
 E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\utils\PropertyUtils.java
 E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\pages\BasePage.java
-E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\customtypes\CustomParameterTypes.java
 E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\pages\CartPage.java
 E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\stepDef\realStepDef.java
 E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\pages\CheckoutPage.java
-E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\domainobject\Product.java
 E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\factory\DriverFactory.java
 E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\runner\JUnitRunnerTest.java
 E:\Intellij Files\Selenium_Cucumber\src\test\java\Real_Scenario\hooks\MyHooks.java

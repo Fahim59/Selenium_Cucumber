@@ -32,6 +32,7 @@ public class realStepDef {
 
         Assert.assertEquals(quantity, new CartPage(driver).getProductQuantity());
     }
+    //-----------------------------------------------------------------------------------------------//
 
     @Given("I'm a customer")
     public void iMACustomer() {
