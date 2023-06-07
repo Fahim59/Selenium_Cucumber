@@ -2,9 +2,9 @@ package Real_Scenario.stepDef;
 
 import Real_Scenario.constants.EndPoint;
 import Real_Scenario.context.TestContext;
-import Real_Scenario.factory.DriverFactory;
 import Real_Scenario.pages.CartPage;
 import Real_Scenario.pages.CheckoutPage;
+import Real_Scenario.pages.PageFactoryManager;
 import Real_Scenario.pages.StorePage;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
@@ -15,48 +15,54 @@ import java.util.Map;
 
 public class realStepDef {
     public WebDriver driver;
+    private CartPage cartPage;
+    private StorePage storePage;
+    private CheckoutPage checkoutPage;
 
     public realStepDef(TestContext context) {
         driver = context.driver;
+        cartPage = PageFactoryManager.getCartPage(context.driver);
+        storePage = PageFactoryManager.getStorePage(context.driver);
+        checkoutPage = PageFactoryManager.getCheckoutPage(context.driver);
     }
 
     @Given("I'm on the Store Page")
     public void i_m_on_the_store_page() {
-        new StorePage(driver).OpenWebsite(EndPoint.STORE.url);
+        storePage.OpenWebsite(EndPoint.STORE.url);
     }
 
     @When("I add a {string} to the cart")
     public void i_add_a_to_the_cart(String name) {
-        new StorePage(driver).addToCart(name);
+        storePage.addToCart(name);
     }
 
     @Then("I see {int} {string} in the cart")
     public void i_see_in_the_cart(int quantity, String name) {
-        Assert.assertEquals(name, new CartPage(driver).getProductName());
+        Assert.assertEquals(name, cartPage.getProductName());
 
-        Assert.assertEquals(quantity, new CartPage(driver).getProductQuantity());
+        Assert.assertEquals(quantity, cartPage.getProductQuantity());
     }
     //-----------------------------------------------------------------------------------------------//
 
     @Given("I'm a customer")
     public void iMACustomer() {
-        new StorePage(driver).OpenWebsite(EndPoint.STORE.url);
+        storePage.OpenWebsite(EndPoint.STORE.url);
     }
 
     @And("I have {int} {string} in the cart")
     public void iHaveQuantityInTheCart(int quantity, String name) {
-        new StorePage(driver).addToCart(name);
+        storePage.addToCart(name);
     }
 
     @And("I'm on the checkout page")
     public void iMOnTheCheckoutPage() {
-        new CartPage(driver).checkout();
+        cartPage.checkout();
     }
 
     @When("I provide billing details")
     public void iProvideBillingDetails(List<Map<String, String>> details) {
 
-        new CheckoutPage(driver).setBillingDetails(details.get(0).get("first_name"),
+        checkoutPage.setBillingDetails(details.get(0).get("first_name"),
                 details.get(0).get("last_name"),
                 details.get(0).get("country"),
                 details.get(0).get("street"),
@@ -70,11 +76,11 @@ public class realStepDef {
 
     @And("I place an order")
     public void iPlaceAnOrder() {
-        new CheckoutPage(driver).placeorder();
+        checkoutPage.placeorder();
     }
 
     @Then("The order should be placed successfully")
     public void theOrderShouldBePlacedSuccessfully() {
-        Assert.assertEquals("Thank you. Your order has been received.", new CheckoutPage(driver).text());
+        Assert.assertEquals("Thank you. Your order has been received.", checkoutPage.text());
     }
 }
