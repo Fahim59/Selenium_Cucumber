@@ -1,6 +1,7 @@
 package Real_Scenario.stepDef;
 
 import Real_Scenario.constants.EndPoint;
+import Real_Scenario.context.TestContext;
 import Real_Scenario.factory.DriverFactory;
 import Real_Scenario.pages.CartPage;
 import Real_Scenario.pages.CheckoutPage;
@@ -15,9 +16,12 @@ import java.util.Map;
 public class realStepDef {
     public WebDriver driver;
 
+    public realStepDef(TestContext context) {
+        driver = context.driver;
+    }
+
     @Given("I'm on the Store Page")
     public void i_m_on_the_store_page() {
-        driver = DriverFactory.getDriver();
         new StorePage(driver).OpenWebsite(EndPoint.STORE.url);
     }
 
@@ -36,7 +40,6 @@ public class realStepDef {
 
     @Given("I'm a customer")
     public void iMACustomer() {
-        driver = DriverFactory.getDriver();
         new StorePage(driver).OpenWebsite(EndPoint.STORE.url);
     }
 

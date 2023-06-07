@@ -15,9 +15,9 @@ import org.testng.annotations.DataProvider;
                 //tags = "@Sanity"
         )
 public class TestNGRunnerTest extends AbstractTestNGCucumberTests {
-//        @Override
-//        @DataProvider(parallel = true)
-//        public Object[][] scenarios() {
-//                return super.scenarios();
-//        }
+        @Override
+        @DataProvider(parallel = true)
+        public Object[][] scenarios() {
+                return super.scenarios();
+        }
 }

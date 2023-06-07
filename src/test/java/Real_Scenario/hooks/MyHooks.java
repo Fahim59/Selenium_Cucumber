@@ -1,5 +1,6 @@
 package Real_Scenario.hooks;
 
+import Real_Scenario.context.TestContext;
 import Real_Scenario.factory.DriverFactory;
 import io.cucumber.java.*;
 import org.apache.commons.io.FileUtils;
@@ -11,12 +12,19 @@ import java.io.File;
 import java.io.IOException;
 
 public class MyHooks {
-    private static WebDriver driver;
+    private WebDriver driver;
+    private final TestContext context;
+
+    public MyHooks(TestContext context){
+        this.context = context;
+    }
 
     @Before
-    public static void before(Scenario scenario){
+    public void before(Scenario scenario){
+
         System.out.println("Before Thread ID: " +Thread.currentThread().getId() +","+ "Scenario Name: " +scenario.getName());
         driver = DriverFactory.initializeDriver(System.getProperty("browser","chrome"));
+        context.driver = driver;
     }
 
 //    @AfterStep
@@ -36,7 +44,7 @@ public class MyHooks {
 //    }
 
     @After
-    public static void after(Scenario scenario){
+    public void after(Scenario scenario){
         System.out.println("After Thread ID: " +Thread.currentThread().getId() +","+ "Scenario Name: " +scenario.getName());
         driver.quit();
     }
