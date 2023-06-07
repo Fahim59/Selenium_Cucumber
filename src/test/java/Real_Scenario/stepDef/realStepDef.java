@@ -1,5 +1,6 @@
 package Real_Scenario.stepDef;
 
+import Real_Scenario.constants.EndPoint;
 import Real_Scenario.domainobject.Product;
 import Real_Scenario.factory.DriverFactory;
 import Real_Scenario.pages.CartPage;
@@ -23,7 +24,7 @@ public class realStepDef {
     @Given("I'm on the Store Page")
     public void i_m_on_the_store_page() {
         driver = DriverFactory.getDriver();
-        new StorePage(driver).OpenWebsite("/store");
+        new StorePage(driver).OpenWebsite(EndPoint.STORE.url);
     }
 
     @When("I add a {product} to the cart")
@@ -41,7 +42,7 @@ public class realStepDef {
     @Given("I'm a customer")
     public void iMACustomer() {
         driver = DriverFactory.getDriver();
-        new StorePage(driver).OpenWebsite("/store");
+        new StorePage(driver).OpenWebsite(EndPoint.STORE.url);
     }
 
     @And("I have {int} {product} in the cart")
