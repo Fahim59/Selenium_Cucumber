@@ -23,26 +23,26 @@ public class realStepDef {
     private final StorePage storePage;
     private final CheckoutPage checkoutPage;
 
-//    private static final Logger logger = LogManager.getLogger(realStepDef.class);
-//
-//    public static void main(String[] args) {
-//        Configurator.initialize(null, "log4j2.xml");
-//    }
+    private static final Logger logger = LogManager.getLogger(realStepDef.class);
 
-//    public static void saveLogFile() {
-//        try {
-//            File logFile = new File("Log Result/test.log");
-//            File outputFile = new File("Log Result/test_output.txt");
-//
-//            String logContents = FileUtils.readFileToString(logFile, "UTF-8");
-//            FileUtils.writeStringToFile(outputFile, logContents, "UTF-8");
-//
-//            logger.info("Log file saved to: " + outputFile.getAbsolutePath());
-//        }
-//        catch (Exception e) {
-//            logger.error("Error saving log file", e);
-//        }
-//    }
+    public static void main(String[] args) {
+        Configurator.initialize(null, "log4j2.xml");
+    }
+
+    public static void saveLogFile() {
+        try {
+            File logFile = new File("Log Result/test.log");
+            File outputFile = new File("Log Result/test_output.txt");
+
+            String logContents = FileUtils.readFileToString(logFile, "UTF-8");
+            FileUtils.writeStringToFile(outputFile, logContents, "UTF-8");
+
+            logger.info("Log file saved to: " + outputFile.getAbsolutePath());
+        }
+        catch (Exception e) {
+            logger.error("Error saving log file", e);
+        }
+    }
 
     public realStepDef(TestContext context) {
         driver = context.driver;

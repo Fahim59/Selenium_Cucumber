@@ -11,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 import java.io.IOException;
 
+import static Real_Scenario.stepDef.realStepDef.saveLogFile;
+
 public class MyHooks {
     private WebDriver driver;
     private final TestContext context;
@@ -46,7 +48,7 @@ public class MyHooks {
     @After
     public void after(Scenario scenario){
         System.out.println("After Thread ID: " +Thread.currentThread().getId() +","+ "Scenario Name: " +scenario.getName());
-        //saveLogFile();
+        saveLogFile();
         driver.quit();
     }
 }
