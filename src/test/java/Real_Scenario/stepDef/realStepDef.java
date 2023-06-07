@@ -1,5 +1,6 @@
 package Real_Scenario.stepDef;
 
+import Real_Scenario.domainobject.Product;
 import Real_Scenario.factory.DriverFactory;
 import Real_Scenario.pages.CartPage;
 import Real_Scenario.pages.CheckoutPage;
@@ -24,14 +25,14 @@ public class realStepDef {
         new StorePage(driver).OpenWebsite("https://askomdch.com/store");
     }
 
-    @When("I add a {string} to the cart")
-    public void i_add_a_to_the_cart(String product) {
-        new StorePage(driver).addToCart(product);
+    @When("I add a {product} to the cart")
+    public void i_add_a_to_the_cart(Product product) {
+        new StorePage(driver).addToCart(product.getName());
     }
 
-    @Then("I see {int} {string} in the cart")
-    public void i_see_in_the_cart(int quantity, String product) {
-        Assert.assertEquals(product, new CartPage(driver).getProductName());
+    @Then("I see {int} {product} in the cart")
+    public void i_see_in_the_cart(int quantity, Product product) {
+        Assert.assertEquals(product.getName(), new CartPage(driver).getProductName());
 
         Assert.assertEquals(quantity, new CartPage(driver).getProductQuantity());
     }
@@ -42,13 +43,13 @@ public class realStepDef {
         new StorePage(driver).OpenWebsite("https://askomdch.com/store");
     }
 
-    @And("I have {int} {string} in the cart")
-    public void iHaveQuantityInTheCart(int quantity, String product) {
-        new StorePage(driver).addToCart(product);
+    @And("I have {int} {product} in the cart")
+    public void iHaveQuantityInTheCart(int quantity, Product product) {
+        new StorePage(driver).addToCart(product.getName());
     }
 
     @And("I'm on the checkout page")
-    public void iMOnTheCheckoutPage() throws InterruptedException {
+    public void iMOnTheCheckoutPage() {
         new CartPage(driver).checkout();
     }
 
@@ -68,7 +69,7 @@ public class realStepDef {
     }
 
     @And("I place an order")
-    public void iPlaceAnOrder() throws InterruptedException {
+    public void iPlaceAnOrder() {
         new CheckoutPage(driver).placeorder();
     }
 
