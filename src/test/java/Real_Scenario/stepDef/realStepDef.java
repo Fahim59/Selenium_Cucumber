@@ -1,19 +1,13 @@
 package Real_Scenario.stepDef;
 
 import Real_Scenario.constants.EndPoint;
-import Real_Scenario.domainobject.Product;
 import Real_Scenario.factory.DriverFactory;
 import Real_Scenario.pages.CartPage;
 import Real_Scenario.pages.CheckoutPage;
 import Real_Scenario.pages.StorePage;
-import Real_Scenario.utils.ConfigLoader;
 import io.cucumber.java.en.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 import java.util.Map;
@@ -27,14 +21,14 @@ public class realStepDef {
         new StorePage(driver).OpenWebsite(EndPoint.STORE.url);
     }
 
-    @When("I add a {product} to the cart")
-    public void i_add_a_to_the_cart(Product product) {
-        new StorePage(driver).addToCart(product.getName());
+    @When("I add a {string} to the cart")
+    public void i_add_a_to_the_cart(String name) {
+        new StorePage(driver).addToCart(name);
     }
 
-    @Then("I see {int} {product} in the cart")
-    public void i_see_in_the_cart(int quantity, Product product) {
-        Assert.assertEquals(product.getName(), new CartPage(driver).getProductName());
+    @Then("I see {int} {string} in the cart")
+    public void i_see_in_the_cart(int quantity, String name) {
+        Assert.assertEquals(name, new CartPage(driver).getProductName());
 
         Assert.assertEquals(quantity, new CartPage(driver).getProductQuantity());
     }
@@ -45,9 +39,9 @@ public class realStepDef {
         new StorePage(driver).OpenWebsite(EndPoint.STORE.url);
     }
 
-    @And("I have {int} {product} in the cart")
-    public void iHaveQuantityInTheCart(int quantity, Product product) {
-        new StorePage(driver).addToCart(product.getName());
+    @And("I have {int} {string} in the cart")
+    public void iHaveQuantityInTheCart(int quantity, String name) {
+        new StorePage(driver).addToCart(name);
     }
 
     @And("I'm on the checkout page")

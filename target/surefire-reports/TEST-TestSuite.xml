@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="TestSuite" time="0.076" errors="0" skipped="0">
+<testsuite tests="0" failures="0" name="TestSuite" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
     <property name="java.vm.version" value="25.111-b14"/>
+    <property name="browser" value="chrome"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="maven.multiModuleProjectDirectory" value="E:\Intellij Files\Selenium_Cucumber"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
@@ -46,7 +47,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_111\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -Dbrowser=chrome"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -65,17 +66,4 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Real_Scenario.TestNGRunnerTest" name="runScenario" time="0.076">
-    <failure message="TODO: implement me" type="io.cucumber.java.PendingException">io.cucumber.java.PendingException: TODO: implement me
-	at Real_Scenario.realStepDef.i_m_on_the_store_page(realStepDef.java:11)
-	at ✽.I&apos;m on the Store Page(classpath:Real_Scenario/real.feature:6)
-</failure>
-    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@2a3046da
-[Configuration] [WARN] Detected a static method [Real_Scenario.TestNGRunnerTest.beforeClass()]. Static configuration methods can cause  unexpected behavior.
-[Configuration] [WARN] Detected a static method [Real_Scenario.TestNGRunnerTest.afterClass()]. Static configuration methods can cause  unexpected behavior.
-
-BEFORE CLASS
-
-</system-out>
-  </testcase>
 </testsuite>
