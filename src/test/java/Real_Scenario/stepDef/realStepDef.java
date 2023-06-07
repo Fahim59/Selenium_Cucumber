@@ -5,6 +5,7 @@ import Real_Scenario.factory.DriverFactory;
 import Real_Scenario.pages.CartPage;
 import Real_Scenario.pages.CheckoutPage;
 import Real_Scenario.pages.StorePage;
+import Real_Scenario.utils.ConfigLoader;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
@@ -22,7 +23,7 @@ public class realStepDef {
     @Given("I'm on the Store Page")
     public void i_m_on_the_store_page() {
         driver = DriverFactory.getDriver();
-        new StorePage(driver).OpenWebsite("https://askomdch.com/store");
+        new StorePage(driver).OpenWebsite("/store");
     }
 
     @When("I add a {product} to the cart")
@@ -40,7 +41,7 @@ public class realStepDef {
     @Given("I'm a customer")
     public void iMACustomer() {
         driver = DriverFactory.getDriver();
-        new StorePage(driver).OpenWebsite("https://askomdch.com/store");
+        new StorePage(driver).OpenWebsite("/store");
     }
 
     @And("I have {int} {product} in the cart")

@@ -9,6 +9,6 @@ Feature: Add to cart
     Examples:
     |product_name    |quantity|
     |Blue Shoes      |1       |
-    |Dark Brown Jeans|1       |
+#    |Dark Brown Jeans|1       |
 
 

@@ -1,5 +1,6 @@
 package Real_Scenario.pages;
 
+import Real_Scenario.utils.ConfigLoader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,9 +17,7 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void OpenWebsite(String Url) {
-        driver.get(Url);
+    public void OpenWebsite(String endPoint) {
+        driver.get(ConfigLoader.getInstance().getBaseUrl() + endPoint);
     }
-
-    public static void SmallWait(int second) throws InterruptedException {Thread.sleep(second);}
 }
