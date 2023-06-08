@@ -4,6 +4,7 @@ import Real_Scenario.context.TestContext;
 import Real_Scenario.factory.DriverFactory;
 import io.cucumber.java.*;
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -11,14 +12,25 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 import java.io.IOException;
 
-import static Real_Scenario.stepDef.realStepDef.saveLogFile;
-
 public class MyHooks {
     private WebDriver driver;
     private final TestContext context;
 
     public MyHooks(TestContext context){
         this.context = context;
+    }
+
+    public static void saveLogFile() {
+        try {
+            File logFile = new File("Log Result/test.log");
+            File outputFile = new File("Log Result/test_output.txt");
+
+            String logContents = FileUtils.readFileToString(logFile, "UTF-8");
+            FileUtils.writeStringToFile(outputFile, logContents, "UTF-8");
+        }
+        catch (Exception e) {
+            System.out.println("Log save failed" +e);
+        }
     }
 
     @Before
