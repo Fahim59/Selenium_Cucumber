@@ -2,10 +2,8 @@ package Real_Scenario.stepDef;
 
 import Real_Scenario.constants.EndPoint;
 import Real_Scenario.context.TestContext;
-import Real_Scenario.pages.PageFactoryManager;
-import Real_Scenario.pages.StorePage;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
+import Real_Scenario.pages.*;
+import io.cucumber.java.en.*;
 import org.apache.logging.log4j.*;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.openqa.selenium.WebDriver;
