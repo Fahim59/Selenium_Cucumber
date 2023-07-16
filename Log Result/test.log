@@ -15,3 +15,12 @@
 2023-07-13 22:04:48.322 [main] INFO  Real_Scenario.stepDef.StoreDefinition - I place an order
 2023-07-13 22:04:49.228 [main] INFO  Real_Scenario.stepDef.StoreDefinition - The order should be placed successfully
 2023-07-13 22:17:15.996 [main] INFO  Real_Scenario.stepDef.StoreDefinition - I'm on the Store Page
+2023-07-16 10:15:10.288 [main] INFO  Real_Scenario.stepDef.StoreDefinition - I'm on the Store Page
+2023-07-16 10:15:12.876 [main] INFO  Real_Scenario.stepDef.StoreDefinition - I add a {string} to the cart
+2023-07-16 10:15:12.967 [main] INFO  Real_Scenario.stepDef.StoreDefinition - I see {int} {string} in the cart
+2023-07-16 10:15:15.388 [main] INFO  Real_Scenario.stepDef.StoreDefinition - I'm a customer
+2023-07-16 10:15:17.277 [main] INFO  Real_Scenario.stepDef.StoreDefinition - I have {int} {string} in the cart
+2023-07-16 10:15:18.361 [main] INFO  Real_Scenario.stepDef.StoreDefinition - I'm on the checkout page
+2023-07-16 10:15:19.802 [main] INFO  Real_Scenario.stepDef.StoreDefinition - I provide billing details
+2023-07-16 10:15:20.371 [main] INFO  Real_Scenario.stepDef.StoreDefinition - I place an order
+2023-07-16 10:15:21.250 [main] INFO  Real_Scenario.stepDef.StoreDefinition - The order should be placed successfully
