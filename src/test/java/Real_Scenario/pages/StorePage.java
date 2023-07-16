@@ -15,6 +15,7 @@ public class StorePage extends BasePage{
 
     public void addToCart(String productName){
         By addTocartBtn = By.xpath("//a[@aria-label='Add “"+productName+"” to your cart']");
+
         wait.until(ExpectedConditions.elementToBeClickable(addTocartBtn)).click();
         wait.until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
     }
