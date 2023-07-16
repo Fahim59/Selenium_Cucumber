@@ -1,0 +1,21 @@
+2023-07-16 10:21:43.822 [main] INFO  Framework.stepDef.StoreDefinition - I'm a customer
+2023-07-16 10:21:45.520 [main] INFO  Framework.stepDef.StoreDefinition - I'm on the Men Page
+2023-07-16 10:21:47.512 [main] INFO  Framework.stepDef.StoreDefinition - I add a Faint Blue Jeans to the cart
+2023-07-16 10:21:47.588 [main] INFO  Framework.stepDef.StoreDefinition - I see 1 Faint Blue Jeans in the cart
+2023-07-16 10:21:49.953 [main] INFO  Framework.stepDef.StoreDefinition - I'm on the checkout page
+2023-07-16 10:21:51.273 [main] INFO  Framework.stepDef.StoreDefinition - I provide billing details
+2023-07-16 10:21:52.906 [main] INFO  Framework.stepDef.StoreDefinition - I place an order
+2023-07-16 10:21:54.442 [main] INFO  Framework.stepDef.StoreDefinition - The order should be placed successfully
+2023-07-16 10:22:03.783 [main] INFO  Framework.stepDef.StoreDefinition - I'm a customer
+2023-07-16 10:22:05.571 [main] INFO  Framework.stepDef.StoreDefinition - I'm on the Account Page
+2023-07-16 10:22:06.476 [main] INFO  Framework.stepDef.StoreDefinition - I fill up my information
+2023-07-16 10:22:08.047 [main] INFO  Framework.stepDef.StoreDefinition - I see dashboard containing my username
+2023-07-16 10:22:16.349 [main] INFO  Framework.stepDef.StoreDefinition - I'm a customer
+2023-07-16 10:22:18.079 [main] INFO  Framework.stepDef.StoreDefinition - I'm on the Account Page
+2023-07-16 10:22:20.241 [main] INFO  Framework.stepDef.StoreDefinition - I enter my login credentials
+2023-07-16 10:22:20.317 [main] INFO  Framework.stepDef.StoreDefinition - Login is successful
+2023-07-16 10:22:28.628 [main] INFO  Framework.stepDef.StoreDefinition - I'm a customer
+2023-07-16 10:22:30.231 [main] INFO  Framework.stepDef.StoreDefinition - I'm on the Men Page
+2023-07-16 10:22:31.884 [main] INFO  Framework.stepDef.StoreDefinition - I add a Green Tshirt to the cart
+2023-07-16 10:22:31.947 [main] INFO  Framework.stepDef.StoreDefinition - I see 1 Green Tshirt in the cart
+2023-07-16 10:22:34.111 [main] INFO  Framework.stepDef.StoreDefinition - I apply coupon code off20
