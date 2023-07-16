@@ -57,7 +57,5 @@ public class MyHooks {
         System.out.println("After Thread ID: " +Thread.currentThread().getId() +","+ "Scenario Name: " +scenario.getName());
         saveLogFile();
         driver.quit();
-
-        BasePage.SendEmail();
     }
 }
